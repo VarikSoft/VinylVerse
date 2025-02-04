@@ -22,8 +22,6 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 [Here will be photo/video]
 
----
-
 ### User Management & Security
 
 - **Login & Registration:**  
@@ -46,8 +44,6 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 [Here will be photo/video]
 
----
-
 ### Record, Artist & Track Management
 
 - **Comprehensive Management:**  
@@ -66,8 +62,6 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
   Manage multiple records and their associated data from a centralized administration panel.
 
 [Here will be photo/video]
-
----
 
 ### Sales, Shop & Additional Functionalities
 
@@ -90,8 +84,6 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 [Here will be photo/video]
 
----
-
 ### Localization & Terms
 
 - **Multilingual Support:**  
@@ -99,8 +91,6 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 - **Terms & Conditions:**  
   A dedicated button provides access to the Terms of Service. The TOS are loaded from a text file, with a default short version restored if the file is missing.
-
----
 
 ## Installation
 
@@ -118,8 +108,6 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 [Here will be photo/video]
 
----
-
 ## Usage
 
 Upon launch, VinylVerse displays a login screen with registration capability. Once logged in:
@@ -130,8 +118,6 @@ Upon launch, VinylVerse displays a login screen with registration capability. On
 For more detailed instructions, refer to the documentation provided in the [Documentation](docs/README.md) folder.
 
 [Here will be photo/video]
-
----
 
 ## License
 
