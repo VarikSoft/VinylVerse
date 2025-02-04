@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="VinylVerse.Controls.CustomTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VinylVerse.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="250 "
+             x:Name="root">
+    <Grid>
+        <!-- The actual TextBox where the user enters text -->
+        <TextBox x:Name="PART_TextBox"
+             Text="{Binding Text, ElementName=root, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+             Background="Transparent"
+             BorderThickness="0"
+             VerticalContentAlignment="Center"
+             Padding="5"
+             Foreground="#130F40"
+             GotFocus="PART_TextBox_GotFocus"
+             LostFocus="PART_TextBox_LostFocus"
+             TextChanged="PART_TextBox_TextChanged" />
+        
+        <!-- Placeholder TextBlock, shown when the TextBox is empty and not focused -->
+        <TextBlock x:Name="PlaceholderTextBlock"
+               Text="{Binding Placeholder, ElementName=root}"
+               Foreground="#D7D7D7"
+               Margin="5,0,0,0"
+               VerticalAlignment="Center"
+               IsHitTestVisible="False" />
+    </Grid>
+</UserControl>

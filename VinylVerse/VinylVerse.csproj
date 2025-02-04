@@ -65,6 +65,9 @@
     <Compile Include="Controls\CustomPasswordBox.xaml.cs">
       <DependentUpon>CustomPasswordBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CustomTextBox.xaml.cs">
+      <DependentUpon>CustomTextBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
@@ -115,6 +118,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\CustomPasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CustomTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

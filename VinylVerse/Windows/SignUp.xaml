@@ -23,7 +23,28 @@
                              MaskCharacter="●"
                              Password="{Binding MyPassword, Mode=TwoWay}"
                              HorizontalAlignment="Center"
-                             VerticalAlignment="Top" Width="208" Margin="0,143,0,0"/>
+                             VerticalAlignment="Top" Width="320" Margin="0,274,0,0" Height="40"/>
+
+            <controls:CustomTextBox Placeholder="Type your username"
+                         FontFamily="Kanit"
+                         FontSize="15"
+                         Text="{Binding YourTextProperty, Mode=TwoWay}"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Top" Margin="64,154,0,0" Width="281"/>
+
+            <controls:CustomTextBox Placeholder="Type your e-mail"
+                FontFamily="Kanit"
+                FontSize="15"
+                Text="{Binding YourTextProperty, Mode=TwoWay}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" Margin="64,214,0,0" Width="281"/>
+            
+            <controls:CustomPasswordBox x:Name="textbox_password_Копировать" Placeholder="Re-Type your password"
+                FontFamily="Kanit"
+                MaskCharacter="●"
+                Password="{Binding MyPassword, Mode=TwoWay}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" Width="320" Margin="0,420,0,0" Height="40"/>
 
         </Grid>
     </Border>
