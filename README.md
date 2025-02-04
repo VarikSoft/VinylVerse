@@ -22,6 +22,8 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 [Here will be photo/video]
 
+--
+
 ### User Management & Security
 
 - **Login & Registration:**  
