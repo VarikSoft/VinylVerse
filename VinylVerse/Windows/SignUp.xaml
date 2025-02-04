@@ -1,0 +1,24 @@
+﻿<Window x:Class="VinylVerse.Windows.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VinylVerse.Windows"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True" 
+        Background="Transparent" 
+        ResizeMode="NoResize" 
+        Title="SignUp" Height="600" Width="450">
+    <Border Background="White" 
+            CornerRadius="20"
+            BorderThickness="1" 
+            SnapsToDevicePixels="True">
+        <Grid>
+            <Label Content="Sign Up" FontFamily="Kanit" FontSize="48" Foreground="#130F40" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top"/>
+
+
+
+        </Grid>
+    </Border>
+</Window>

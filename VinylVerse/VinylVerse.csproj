@@ -59,6 +59,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Behaviours\WindowDragHelper.cs" />
+    <Compile Include="Windows\SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -78,6 +82,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Design\Fonts\Kanit-Black.ttf" />
+    <Resource Include="Design\Fonts\Kanit-BlackItalic.ttf" />
+    <Resource Include="Design\Fonts\Kanit-Bold.ttf" />
+    <Resource Include="Design\Fonts\Kanit-BoldItalic.ttf" />
+    <Resource Include="Design\Fonts\Kanit-ExtraBold.ttf" />
+    <Resource Include="Design\Fonts\Kanit-ExtraBoldItalic.ttf" />
+    <Resource Include="Design\Fonts\Kanit-ExtraLight.ttf" />
+    <Resource Include="Design\Fonts\Kanit-ExtraLightItalic.ttf" />
+    <Resource Include="Design\Fonts\Kanit-Italic.ttf" />
+    <Resource Include="Design\Fonts\Kanit-Light.ttf" />
+    <Resource Include="Design\Fonts\Kanit-LightItalic.ttf" />
+    <Resource Include="Design\Fonts\Kanit-Medium.ttf" />
+    <Resource Include="Design\Fonts\Kanit-MediumItalic.ttf" />
+    <Resource Include="Design\Fonts\Kanit-Regular.ttf" />
+    <Resource Include="Design\Fonts\Kanit-SemiBold.ttf" />
+    <Resource Include="Design\Fonts\Kanit-SemiBoldItalic.ttf" />
+    <Resource Include="Design\Fonts\Kanit-Thin.ttf" />
+    <Resource Include="Design\Fonts\Kanit-ThinItalic.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,6 +107,164 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Design\Icons\Amazon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\ApplePay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\Bitcoin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\button_ok.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\Etherium.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\GooglePay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_checked.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_checked_circle.svg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_deny.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_dot.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_eye.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_eye_closed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_package.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_password.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_shuffle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_studio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_user.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_user_main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\icon_vinyls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\logo_circle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\Mastercard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\moon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\PayPal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\security.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\Stripe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\sun.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design\Icons\visalogo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Design\Icons\Amazon.svg" />
+    <Content Include="Design\Icons\ApplePay.svg" />
+    <Content Include="Design\Icons\Bitcoin.svg" />
+    <Content Include="Design\Icons\button_ok.svg" />
+    <Content Include="Design\Icons\Etherium.svg" />
+    <Content Include="Design\Icons\flag_britain.svg" />
+    <Content Include="Design\Icons\flag_poland.svg" />
+    <Content Include="Design\Icons\GooglePay.svg" />
+    <Content Include="Design\Icons\icon_checked.svg" />
+    <Content Include="Design\Icons\icon_checked_circle.svg" />
+    <Content Include="Design\Icons\icon_deny.svg" />
+    <Content Include="Design\Icons\icon_dot.svg" />
+    <Content Include="Design\Icons\icon_eye.svg" />
+    <Content Include="Design\Icons\icon_eye_closed.svg" />
+    <Content Include="Design\Icons\icon_home.svg" />
+    <Content Include="Design\Icons\icon_package.svg" />
+    <Content Include="Design\Icons\icon_password.svg" />
+    <Content Include="Design\Icons\icon_settings.svg" />
+    <Content Include="Design\Icons\icon_shuffle.svg" />
+    <Content Include="Design\Icons\icon_studio.svg" />
+    <Content Include="Design\Icons\icon_user.svg" />
+    <Content Include="Design\Icons\icon_user_main.svg" />
+    <Content Include="Design\Icons\icon_vinyls.svg" />
+    <Content Include="Design\Icons\logo_circle.svg" />
+    <Content Include="Design\Icons\Mastercard.svg" />
+    <Content Include="Design\Icons\moon.svg" />
+    <Content Include="Design\Icons\PayPal.svg" />
+    <Content Include="Design\Icons\security.svg" />
+    <Content Include="Design\Icons\Stripe.svg" />
+    <Content Include="Design\Icons\sun.svg" />
+    <Content Include="Design\Icons\visa-logo.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
