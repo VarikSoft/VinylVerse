@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VinylVerse.Windows"
+        xmlns:controls="clr-namespace:VinylVerse.Controls"
         mc:Ignorable="d"
         WindowStyle="None"
         AllowsTransparency="True" 
@@ -17,7 +18,12 @@
         <Grid>
             <Label Content="Sign Up" FontFamily="Kanit" FontSize="48" Foreground="#130F40" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top"/>
 
-
+            <controls:CustomPasswordBox x:Name="textbox_password" Placeholder="Type your password"
+                             FontFamily="Kanit"
+                             MaskCharacter="●"
+                             Password="{Binding MyPassword, Mode=TwoWay}"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Top" Width="208" Margin="0,143,0,0"/>
 
         </Grid>
     </Border>
