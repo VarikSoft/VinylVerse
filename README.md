@@ -99,7 +99,7 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/VinylVerse.git
+    git clone https://github.com/variksoft/VinylVerse.git
     ```
 
 2. **Open the solution** in Visual Studio and build the project.
