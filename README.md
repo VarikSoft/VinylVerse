@@ -4,8 +4,6 @@
 
 VinylVerse is a feature-rich, multi-window studio application designed for managing vinyl records, artists, tracks, and sales. Built with a modern, intuitive graphical interface and robust back-end support, VinylVerse empowers users—from casual music enthusiasts to professional administrators—to manage their music collections and related transactions seamlessly.
 
----
-
 ## Features
 
 ### Modern Graphical Interface & Custom Branding
