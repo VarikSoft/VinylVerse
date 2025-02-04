@@ -4,7 +4,7 @@
 
 VinylVerse is a feature-rich, multi-window studio application designed for managing vinyl records, artists, tracks, and sales. Built with a modern, intuitive graphical interface and robust back-end support, VinylVerse empowers users—from casual music enthusiasts to professional administrators—to manage their music collections and related transactions seamlessly.
 
-## Features
+# Features
 
 ### Modern Graphical Interface & Custom Branding
 
@@ -22,7 +22,7 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 [Here will be photo/video]
 
---
+
 
 ### User Management & Security
 
@@ -86,7 +86,7 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 [Here will be photo/video]
 
-### Localization & Terms
+# Localization & Terms
 
 - **Multilingual Support:**  
   Choose the language for the application from several available options.
@@ -94,7 +94,7 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 - **Terms & Conditions:**  
   A dedicated button provides access to the Terms of Service. The TOS are loaded from a text file, with a default short version restored if the file is missing.
 
-## Installation
+# Installation
 
 1. **Clone the repository:**
 
@@ -110,7 +110,7 @@ VinylVerse is a feature-rich, multi-window studio application designed for manag
 
 [Here will be photo/video]
 
-## Usage
+# Usage
 
 Upon launch, VinylVerse displays a login screen with registration capability. Once logged in:
 
@@ -121,6 +121,6 @@ For more detailed instructions, refer to the documentation provided in the [Docu
 
 [Here will be photo/video]
 
-## License
+# License
 
 VinylVerse is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
