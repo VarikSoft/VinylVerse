@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,23 +17,21 @@ using VinylVerse.Controls;
 
 namespace VinylVerse.Windows
 {
-    public partial class SignUp : Window
+    /// <summary>
+    /// Логика взаимодействия для SignIn.xaml
+    /// </summary>
+    public partial class SignIn : Window
     {
-        public SignUp()
+        public SignIn()
         {
             InitializeComponent();
             WindowDragHelper.EnableDrag(this, this);
         }
 
-        private void CustomTextBox_Loaded(object sender, RoutedEventArgs e)
+        private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            Con1.ToggleState(true);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var signInWindow = new SignIn();
-            Animator.TransitionWindows(this, signInWindow, 0.2);
+            var signUpWindow = new SignUp();
+            Animator.TransitionWindows(this, signUpWindow, 0.2);
         }
     }
 }

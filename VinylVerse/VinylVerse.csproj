@@ -61,12 +61,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Behaviours\Animator.cs" />
     <Compile Include="Behaviours\WindowDragHelper.cs" />
     <Compile Include="Controls\CustomPasswordBox.xaml.cs">
       <DependentUpon>CustomPasswordBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomTextBox.xaml.cs">
       <DependentUpon>CustomTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StatusLabel.xaml.cs">
+      <DependentUpon>StatusLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SignIn.xaml.cs">
+      <DependentUpon>SignIn.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
@@ -122,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\CustomTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\StatusLabel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -240,6 +251,10 @@
     <Page Include="Design\Icons\visalogo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\SignIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\SignUp.xaml">
       <SubType>Designer</SubType>
