@@ -1,6 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 
 namespace VinylVerse.Controls
 {
@@ -53,16 +55,42 @@ namespace VinylVerse.Controls
         {
             if (IsChecked)
             {
-                DotIcon.Opacity = 0;
-                CheckIcon.Opacity = 1;
-                LabelText.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#55D78B"));
+                AnimateOpacity(DotIcon, 1, 0); // Скрываем точку
+                AnimateOpacity(CheckIcon, 0, 1); // Показываем галочку
+                AnimateColor(LabelText, "#D7D7D7", "#55D78B"); // Зеленый цвет текста
             }
             else
             {
-                DotIcon.Opacity = 1;
-                CheckIcon.Opacity = 0;
-                LabelText.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#D7D7D7"));
+                AnimateOpacity(DotIcon, 0, 1); // Показываем точку
+                AnimateOpacity(CheckIcon, 1, 0); // Скрываем галочку
+                AnimateColor(LabelText, "#55D78B", "#D7D7D7"); // Серый цвет текста
             }
+        }
+
+        private void AnimateOpacity(UIElement element, double from, double to)
+        {
+            DoubleAnimation animation = new DoubleAnimation
+            {
+                From = from,
+                To = to,
+                Duration = TimeSpan.FromMilliseconds(300),
+                EasingFunction = new QuadraticEase() // Плавное ускорение и замедление
+            };
+            element.BeginAnimation(UIElement.OpacityProperty, animation);
+        }
+
+        private void AnimateColor(TextBlock textBlock, string fromColor, string toColor)
+        {
+            ColorAnimation animation = new ColorAnimation
+            {
+                From = (Color)ColorConverter.ConvertFromString(fromColor),
+                To = (Color)ColorConverter.ConvertFromString(toColor),
+                Duration = TimeSpan.FromMilliseconds(300),
+                EasingFunction = new QuadraticEase() // Плавное изменение цвета
+            };
+
+            textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString(fromColor));
+            textBlock.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, animation);
         }
 
         // Метод для переключения состояния

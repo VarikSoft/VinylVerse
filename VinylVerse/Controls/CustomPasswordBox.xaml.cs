@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace VinylVerse.Controls
 {
@@ -20,6 +21,16 @@ namespace VinylVerse.Controls
         // Хранит реальное значение пароля
         private string _realPassword = string.Empty;
 
+        public static readonly RoutedEvent PasswordTextChangedEvent =
+    EventManager.RegisterRoutedEvent("PasswordTextChanged", RoutingStrategy.Bubble,
+        typeof(RoutedEventHandler), typeof(CustomPasswordBox));
+
+        // CLR-обертка для события
+        public event RoutedEventHandler PasswordTextChanged
+        {
+            add { AddHandler(PasswordTextChangedEvent, value); }
+            remove { RemoveHandler(PasswordTextChangedEvent, value); }
+        }
         public CustomPasswordBox()
         {
             InitializeComponent();
@@ -179,6 +190,8 @@ namespace VinylVerse.Controls
                 _realPassword = PART_TextBox.Text;
                 Password = _realPassword;
             }
+
+            RaiseEvent(new RoutedEventArgs(PasswordTextChangedEvent));
             UpdatePlaceholderVisibility();
         }
 
