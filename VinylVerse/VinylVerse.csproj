@@ -72,6 +72,9 @@
     <Compile Include="Controls\StatusLabel.xaml.cs">
       <DependentUpon>StatusLabel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\NotificationWindow.xaml.cs">
+      <DependentUpon>NotificationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\SignIn.xaml.cs">
       <DependentUpon>SignIn.xaml</DependentUpon>
     </Compile>
@@ -251,6 +254,10 @@
     <Page Include="Design\Icons\visalogo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\NotificationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\SignIn.xaml">
       <SubType>Designer</SubType>

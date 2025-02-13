@@ -23,7 +23,7 @@ namespace VinylVerse.Windows
     public partial class SignUp : Window
     {
         public int userPasswordStrength = 0;
-
+        public string password;
         public SignUp()
         {
             InitializeComponent();
@@ -118,11 +118,73 @@ namespace VinylVerse.Windows
             Animator.TransitionWindows(this, signInWindow, 0.2);
         }
 
+        private void UsernameTextBox_TextChanged(object sender, RoutedEventArgs e)
+        {
+            bool shouldBeVisible = username_textbox.Text.Length > 0;
+
+            if (shouldBeVisible && username_check.Visibility != Visibility.Visible)
+            {
+                Animator.ToggleVisibility(username_check, 0.2);
+                Animator.ToggleVisibility(username_circle, 0.2);
+                Animator.AnimateColor(username_line, Border.BackgroundProperty, "#D7D7D7", "#55D78B", 200);
+            }
+            else if (!shouldBeVisible && username_check.Visibility == Visibility.Visible)
+            {
+                Animator.ToggleVisibility(username_check, 0.2);
+                Animator.ToggleVisibility(username_circle, 0.2);
+                Animator.AnimateColor(username_line, Border.BackgroundProperty, "#55D78B", "#D7D7D7", 200);
+            }
+        }
+
+        private void EmailTextBox_TextChanged(object sender, RoutedEventArgs e)
+        {
+            bool shouldBeVisible = email_textbox.Text.Length > 0;
+
+            if (shouldBeVisible && email_check.Visibility != Visibility.Visible)
+            {
+                Animator.ToggleVisibility(email_check, 0.2);
+                Animator.ToggleVisibility(email_circle, 0.2);
+                Animator.AnimateColor(email_line, Border.BackgroundProperty, "#D7D7D7", "#55D78B", 200);
+            }
+            else if (!shouldBeVisible && email_check.Visibility == Visibility.Visible)
+            {
+                Animator.ToggleVisibility(email_check, 0.2);
+                Animator.ToggleVisibility(email_circle, 0.2);
+                Animator.AnimateColor(email_line, Border.BackgroundProperty, "#55D78B", "#D7D7D7", 200);
+            }
+        }
+
+        private string lastAppliedColor = "#D7D7D7";
+
+        private void re_textbox_password_PasswordTextChanged(object sender, RoutedEventArgs e)
+        {
+            string newColor;
+
+            if (textbox_re_password.Password == password && textbox_re_password.Password.Length > 0)
+            {
+                newColor = "#55D78B";
+            }
+            else if (textbox_re_password.Password.Length == 0)
+            {
+                newColor = "#D7D7D7";
+            }
+            else
+            {
+                newColor = "#e74c3c";
+            }
+
+            if (lastAppliedColor != newColor)
+            {
+                Animator.AnimateColor(rePasswordLine, Border.BackgroundProperty, lastAppliedColor, newColor, 200);
+                lastAppliedColor = newColor;
+            }
+        }
+
         private int previousStrength = -1;
 
         private void textbox_password_PasswordTextChanged(object sender, RoutedEventArgs e)
         {
-            string password = textbox_password.Password;
+            password = textbox_password.Password;
             int userPasswordStrength = 0;
 
             if (isConditionCompleted(password, ConditionType.isHasEightSymbols))
@@ -160,6 +222,34 @@ namespace VinylVerse.Windows
                 previousStrength = userPasswordStrength;
                 passwordStrenthCheck(userPasswordStrength);
             }
+
+            if (textbox_re_password.Password.Length > 0) {
+                string newColor;
+
+                if (textbox_password.Password.Length == 0)
+                {
+                    newColor = "#D7D7D7";
+                }
+                else if (textbox_password.Password == textbox_re_password.Password)
+                {
+                    newColor = "#55D78B";
+                }
+                else
+                {
+                    newColor = "#e74c3c";
+                }
+
+                if (lastAppliedColor != newColor)
+                {
+                    Animator.AnimateColor(rePasswordLine, Border.BackgroundProperty, lastAppliedColor, newColor, 200);
+                    lastAppliedColor = newColor;
+                }
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NotificationWindow.ShowNotification("Test1");
         }
     }
 }

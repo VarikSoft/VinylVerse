@@ -1,0 +1,22 @@
+﻿<Window x:Class="VinylVerse.Windows.NotificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VinylVerse.Windows"
+        mc:Ignorable="d"
+        Width="300" Height="80"
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent"
+        ShowInTaskbar="False" 
+        Topmost="True">
+    <Border Background="White" CornerRadius="10" Padding="10" Opacity="0.9">
+        <TextBlock x:Name="MessageTextBlock"
+                   TextWrapping="Wrap"
+                   Foreground="#130F40"
+                   FontFamily="Kanit"
+                   FontWeight="Light"
+                   FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Border>
+</Window>

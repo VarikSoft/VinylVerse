@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace VinylVerse.Controls
 {
     public partial class CustomTextBox : UserControl
     {
+        private string _lastText = string.Empty; // Храним предыдущее значение текста
+
         public CustomTextBox()
         {
             InitializeComponent();
@@ -24,7 +15,23 @@ namespace VinylVerse.Controls
         }
 
         /// <summary>
-        /// Dependency property to bind the text entered by the user.
+        /// Событие, уведомляющее об изменении текста.
+        /// </summary>
+        public static readonly RoutedEvent TextChangedEvent =
+            EventManager.RegisterRoutedEvent("TextChanged", RoutingStrategy.Bubble,
+                typeof(RoutedEventHandler), typeof(CustomTextBox));
+
+        /// <summary>
+        /// CLR-обертка для события.
+        /// </summary>
+        public event RoutedEventHandler TextChanged
+        {
+            add => AddHandler(TextChangedEvent, value);
+            remove => RemoveHandler(TextChangedEvent, value);
+        }
+
+        /// <summary>
+        /// Dependency property для текста.
         /// </summary>
         public static readonly DependencyProperty TextProperty =
             DependencyProperty.Register(nameof(Text), typeof(string), typeof(CustomTextBox),
@@ -45,7 +52,7 @@ namespace VinylVerse.Controls
         }
 
         /// <summary>
-        /// Dependency property to set the placeholder text.
+        /// Dependency property для placeholder'а.
         /// </summary>
         public static readonly DependencyProperty PlaceholderProperty =
             DependencyProperty.Register(nameof(Placeholder), typeof(string), typeof(CustomTextBox),
@@ -69,19 +76,27 @@ namespace VinylVerse.Controls
 
         private void PART_TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Text = PART_TextBox.Text;
+            // Проверяем, изменился ли текст
+            if (PART_TextBox.Text != _lastText)
+            {
+                _lastText = PART_TextBox.Text;
+                Text = _lastText; // Обновляем свойство Text
+
+                RaiseEvent(new RoutedEventArgs(TextChangedEvent)); // Вызываем событие TextChanged
+            }
+
             UpdatePlaceholderVisibility();
         }
 
         /// <summary>
-        /// Shows the placeholder when there is no text and the TextBox is not focused.
+        /// Показывает placeholder, если текст пустой и поле не в фокусе.
         /// </summary>
         private void UpdatePlaceholderVisibility()
         {
             PlaceholderTextBlock.Visibility =
                 string.IsNullOrEmpty(PART_TextBox.Text) && !PART_TextBox.IsFocused
-                ? Visibility.Visible
-                : Visibility.Collapsed;
+                    ? Visibility.Visible
+                    : Visibility.Collapsed;
         }
     }
 }
