@@ -18,10 +18,10 @@ Developed in **C#** with **WPF**, it supported streaming via a custom server usi
 These are old previews of the interface from the working prototype:
 
 🎧 Playlist Interface
-![Playlists Screenshot](screenshots/1.png)
+![Playlists Screenshot](screenshots/3.png)
 
 📝 Sign-Up Screen
-![Sign-Up Screenshot](screenshots/2.png)
+![Sign-Up Screenshot](screenshots/1.png)
 
 ## 🧠 Final Thoughts
 If you’re looking at this wondering “what was going on here?”
