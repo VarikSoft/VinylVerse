@@ -17,13 +17,17 @@ Developed in **C#** with **WPF**, it supported streaming via a custom server usi
 ## 📸 Screenshots
 These are old previews of the interface from the working prototype:
 
+<div align="center">
+
 🎧 Playlist Interface
 
-![Playlists Screenshot](screenshots/3.png)
+<img src="screenshots/3.png" alt="Playlists Screenshot" width="400"/>
 
 📝 Sign-Up Screen
 
-![Sign-Up Screenshot](screenshots/1.png)
+<img src="screenshots/1.png" alt="Sign-Up Screenshot" width="400"/>
+
+</div>
 
 ## 🧠 Final Thoughts
 If you’re looking at this wondering “what was going on here?”
